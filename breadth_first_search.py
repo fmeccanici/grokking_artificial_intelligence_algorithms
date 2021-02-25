@@ -1,7 +1,7 @@
 from collections import deque
 
 maze = {}
-maze["goal"] = ["1", "2"]
+maze["goal"] = ["1", "2", "5"]
 maze["1"] = ["2", "goal"]
 maze["2"] = ["3", "1"]
 maze["3"] = ["4", "2"]
@@ -57,9 +57,8 @@ def search(maze, current_point, visited_points):
                         path.append(current_point)
 
                     return path 
-                    
-    return "No path to goal"
 
+    return "No path to goal"
     
 if __name__ == "__main__":
     print(search(maze, current_point, visited_points))
